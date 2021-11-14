@@ -16,7 +16,7 @@ from .backbone_utils import resnet_fpn_backbone, _validate_trainable_layers
 from ..ops.feature_pyramid_network import LastLevelP6P7
 from ..ops import sigmoid_focal_loss
 from ..ops import boxes as box_ops
-
+from CFG import CFG
 
 __all__ = [
     "RetinaNet", "retinanet_resnet50_fpn", "retinanet_resnet_fpn"
@@ -316,7 +316,7 @@ class RetinaNet(nn.Module):
 
     def __init__(self, backbone, num_classes,
                  # transform parameters
-                 min_size=800, max_size=1333,
+                 min_size=CFG.RESIZE, max_size=CFG.RESIZE,
                  image_mean=None, image_std=None,
                  # Anchor parameters
                  anchor_generator=None, head=None,
