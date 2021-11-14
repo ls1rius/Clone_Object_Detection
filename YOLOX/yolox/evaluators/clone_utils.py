@@ -27,11 +27,11 @@ def get_df_iou(x):
 
 def calc_mAP(df_dt, df_gt):
     if len(df_dt)==0 or len(df_gt)==0:
-        return 0, 0, 0, 0, 0, 0
+        return 0, 0, len(df_gt), 0, 0, 0
     
     df = pd.merge(df_dt, df_gt, on='image_id')
     if len(df)==0:
-        return 0, 0, 0, 0, 0, 0
+        return 0, 0, len(df_gt), 0, 0, 0
     
     correct = 0
     for _, df_cur in df.groupby('image_id'):
