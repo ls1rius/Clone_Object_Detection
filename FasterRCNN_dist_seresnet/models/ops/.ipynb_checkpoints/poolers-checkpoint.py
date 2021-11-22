@@ -2,8 +2,8 @@ import torch
 from torch import nn, Tensor
 
 import torchvision
-from ..ops import roi_align
-from ..ops.boxes import box_area
+from torchvision.ops import roi_align
+from torchvision.ops.boxes import box_area
 
 from typing import Optional, List, Dict, Tuple, Union
 
