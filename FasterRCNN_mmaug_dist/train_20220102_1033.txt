@@ -1,0 +1,9 @@
+2022-01-02 02:33:49.689 | INFO     | __mp_main__:_distributed_worker:91 - Rank 0 initialization finished.
+2022-01-02 02:33:49.948 | INFO     | __mp_main__:_distributed_worker:91 - Rank 1 initialization finished.
+2022-01-02 02:33:49.973 | INFO     | __mp_main__:_distributed_worker:91 - Rank 2 initialization finished.
+2022-01-02 02:33:56.111 | INFO     | utils.setup_env:configure_omp:46 - 
+***************************************************************
+We set `OMP_NUM_THREADS` for each process to 1 to speed up.
+please further tune the variable for optimal performance.
+***************************************************************
+epoch: 1/300:

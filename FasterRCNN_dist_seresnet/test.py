@@ -36,6 +36,7 @@ class Tester():
         
         if CFG.DISTRIBUTED:
             sampler = torch.utils.data.distributed.DistributedSampler(dataset)
+            batch_size = batch_size // dist.get_world_size()
         else:
             sampler = None
         
